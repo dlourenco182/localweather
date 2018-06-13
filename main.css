@@ -1,0 +1,48 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("bg.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 10em 21em;
+    grid-column-gap: 10px;
+    grid-template-areas: "empty empty empty" "info main result";
+    width: 100%;
+}
+
+.empty_class {
+    grid-area: empty;
+    height: 10px;
+}
+
+.main_class {
+    grid-area: main;
+}
+
+.result_class {
+    grid-area: result;
+}
+
+.info_class {
+    grid-area: info;
+}
+
+.item {
+    border-radius: 4px;
+    border: 1px black solid;
+    background-color: lightgray;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IMC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="main.js"></script>
+</head>
+
+<body class="bg">
+    <div class="container">
+        <div class="empty_class"></div>
+        <div class="card info_class">
+            <h5 class="card-header">Additional info</h5>
+            <div class="card-body">
+                <a> This is how is this calculated:</a>
+                <p>
+                    $$IMC= {peso\over altura^2}$$
+                </p>
+                <a>Sendo o Peso em kilogramas (Kg) e a Altura em metros(m) </a>
+            </div>
+        </div>
+        <div class="card main_class">
+            <h5 class="card-header">IMC Calculator!</h5>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="input_weight">Peso</label>
+                        <input type="text" class="form-control" id="input_weight" aria-describedby="emailHelp" placeholder="">
+                        <small id="emailHelp" class="form-text text-muted">em Kg</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="input_height">Altura</label>
+                        <input type="text" class="form-control" id="input_height" aria-describedby="emailHelp" placeholder="">
+                        <small id="emailHelp" class="form-text text-muted">em Cm</small>
+                    </div>
+                    <button type='button' class="btn btn-primary" onclick="tellhim()">Calcula!</button>
+                </form>
+            </div>
+        </div>
+        <div class="card result_class">
+            <h5 class="card-header">Result!</h5>
+            <div class="card-body">
+                <p>Nivel IMC:
+                    <a id="imcvalue"></a>
+                </p>
+                <p>O seu nivel é classificado como:
+                    <a id="imctext"></a>
+                </p>
+                <p>Seja qual a classificação, tenha cuidado com a sua dieta e faça exercicio frequentemente!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
